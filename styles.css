@@ -1,0 +1,20 @@
+body {
+    background-image: url(background.png);
+    background-repeat: repeat-x;
+    background-size:948px 948px;
+    font-family: Helvetica, sans-serif;
+    background-color: white;
+    background-attachment: fixed;
+}
+h1 {
+    font-size: 48pt;
+}
+h2 {
+    font-size: x-large;
+}
+div.mainContent {
+    width:60%;
+    margin:auto;
+    margin-top: 220px;
+    background-color: white;
+}
