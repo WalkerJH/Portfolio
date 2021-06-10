@@ -1,32 +1,35 @@
 :root {
     --color-gray: hsl(0, 0%, 25%);
-    --color-light: hsl(0, 0%, 94%);
-    --color-grey-medium: hsl(0, 0%, 80%);
+    --color-light: hsl(0, 0%, 90%);
+    --color-blue: hsl(196, 65%, 30%);
+    --color-blue-light: hsl(196, 65%, 40%);
+    --color-blue-pale: hsl(196, 64.7%, 70%);
     --outline-size: 2px;
     --minimal-padding: 10px;
-    --small-padding: 40px;
+    --small-padding: 24px;
     --large-padding: 60px;
-    --outside-margin-top: 220px;
-    --outside-margin-sides: 355px;
+    --outside-margin-top: 80px;
 }
 
+.headerText {
+    margin-top: var(--outside-margin-top);
+    color: var(--color-light);
+}
 body {
     overflow:scroll;
-    background-image:url(background.png);
-    background-repeat:repeat-x;
-    background-size:948px 948px;
+    background-image:linear-gradient(to bottom right, var(--color-blue-light), var(--color-blue-pale));
     font-family:Helvetica, sans-serif;
     background-attachment:fixed;
     color:var(--color-gray);
-    height:100%;
 }
 /* Main Content */
 .mainContent {
     height: max-content;
     margin:auto;
-    margin-top:var(--outside-margin-top);
-    margin-left:var(--outside-margin-sides);
-    margin-right:var(--outside-margin-sides);
+    margin-top:var(--small-padding);
+    width: 80vw;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
     background-color:white;
 }
 .mainContentInner {
@@ -54,8 +57,8 @@ ul {
 
  /* Style the buttons that are used to open and close the accordion panel */
  .accordion {
-    background-color: var(--color-light);
-    color: var(--color-gray);
+    background-color: var(--color-blue);
+    color: var(--color-light);
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -67,29 +70,17 @@ ul {
   
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-    background-color: #ccc;
+    background-color: var(--color-blue-light);
 }
 
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
     padding: 0 18px;
-    background-color: var(--color-light);
+    background-color: var(--color-light
+    );
     color: var(--color-gray);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-}
-
-.videoInsert {
-    position: absolute; 
-    right: 0; 
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    width: auto; 
-    height: auto; 
-    z-index: -100;
-    background-size: cover;
-    overflow: hidden;
 }
