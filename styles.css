@@ -12,6 +12,9 @@
 .headerText {
     margin-top: var(--outside-margin-top);
     color: var(--color-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 body {
     overflow-y:scroll;
@@ -19,7 +22,8 @@ body {
     background-image:url("bkg.png");
     image-rendering: pixelated;
     background-attachment:fixed;
-    background-size:100vw;
+    background-position:left;
+    background-size:cover;
     font-family:Helvetica, sans-serif;
     color:var(--color-gray);
 }
