@@ -17,17 +17,20 @@
 }
 body {
     overflow:scroll;
-    background-image:linear-gradient(to bottom right, var(--color-blue-light), var(--color-blue-pale));
-    font-family:Helvetica, sans-serif;
+    background-image:url("bkg.png");
+    image-rendering: pixelated;
     background-attachment:fixed;
+    background-size:100vw;
+    font-family:Helvetica, sans-serif;
     color:var(--color-gray);
 }
+
 /* Main Content */
 .mainContent {
     height: max-content;
     margin:auto;
     margin-top:var(--small-padding);
-    width: 80vw;
+    width: 70vw;
     margin-left: 0 auto;
     margin-right: 0 auto;
     background-color:white;
