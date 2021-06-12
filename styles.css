@@ -1,22 +1,21 @@
 :root {
     --color-gray: hsl(0, 0%, 25%);
     --color-light: hsl(0, 0%, 90%);
-    --color-blue: hsl(196, 65%, 30%);
-    --color-blue-light: hsl(196, 65%, 40%);
-    --color-blue-pale: hsl(196, 64.7%, 70%);
+    --color-menu: hsl(240, 13%, 46%);
+    --color-menu-dark: hsl(240, 13%, 28%);
     --outline-size: 2px;
     --minimal-padding: 10px;
     --small-padding: 24px;
     --large-padding: 60px;
     --outside-margin-top: 80px;
 }
-
 .headerText {
     margin-top: var(--outside-margin-top);
     color: var(--color-light);
 }
 body {
-    overflow:scroll;
+    overflow-y:scroll;
+    overflow-x:hidden;
     background-image:url("bkg.png");
     image-rendering: pixelated;
     background-attachment:fixed;
@@ -30,7 +29,7 @@ body {
     height: max-content;
     margin:auto;
     margin-top:var(--small-padding);
-    width: 70vw;
+    width: 66vw;
     margin-left: 0 auto;
     margin-right: 0 auto;
     background-color:white;
@@ -38,6 +37,10 @@ body {
 .mainContentInner {
     padding:var(--small-padding);
     padding-top:var(--minimal-padding);
+}
+.mainText {
+    padding: 0 18px;
+    color: var(--color-gray);
 }
 h1 {
     font-size:48pt;
@@ -53,6 +56,12 @@ h3 {
 .subtitle {
     text-align:center;
 }
+a {
+    color:var(--color-menu-dark)
+}
+.subtitleLink {
+    color:var(--color-light)
+}
 ul {
     list-style-position: inside;
     padding-left: 0;
@@ -60,7 +69,7 @@ ul {
 
  /* Style the buttons that are used to open and close the accordion panel */
  .accordion {
-    background-color: var(--color-blue);
+    background-color: var(--color-menu);
     color: var(--color-light);
     cursor: pointer;
     padding: 18px;
@@ -73,7 +82,7 @@ ul {
   
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-    background-color: var(--color-blue-light);
+    background-color: var(--color-menu-dark);
 }
 
 
@@ -86,4 +95,12 @@ ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+footer {
+    color:var(--color-light);
+    margin-top:var(--small-padding);
+    position:sticky;
+    width:100%;
+    text-align: center;
 }
