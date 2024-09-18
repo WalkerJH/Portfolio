@@ -2,7 +2,6 @@
   --grey: hsl(220, 10%, 40%);
   --grey-light: hsl(220, 10%, 80%);
   --main-accent: hsl(43, 100%, 60%);
-  --secondary-accent: hsl(190, 60%, 60%);
   --border-width: 1px;
   --small: 10px;
   --medium: 20px;
@@ -134,5 +133,11 @@ footer {
 }
 
 .decorative-stripe {
-  
+  background-color: var(--main-accent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: -1;
 }
