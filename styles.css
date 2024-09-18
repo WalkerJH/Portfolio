@@ -1,110 +1,138 @@
 :root {
-    --color-gray: hsl(0, 0%, 25%);
-    --color-light: hsl(0, 0%, 90%);
-    --color-menu: hsl(240, 13%, 46%);
-    --color-menu-dark: hsl(240, 13%, 28%);
-    --outline-size: 2px;
-    --minimal-padding: 10px;
-    --small-padding: 24px;
-    --large-padding: 60px;
-    --outside-margin-top: 80px;
+  --grey: hsl(220, 10%, 40%);
+  --grey-light: hsl(220, 10%, 80%);
+  --main-accent: hsl(43, 100%, 60%);
+  --secondary-accent: hsl(190, 60%, 60%);
+  --border-width: 1px;
+  --small: 10px;
+  --medium: 20px;
+  --large: 40px;
+  --larger: 80px;
+  --very-large: 240px;
 }
-.headerText {
-    margin-top: var(--outside-margin-top);
-    color: var(--color-light);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+.with-main-accent {
+  color: var(--main-accent);
 }
+
+.with-secondary-accent {
+  color: var(--secondary-accent);
+}
+
+.with-bold {
+  font-weight: bold;
+}
+
+header {
+  margin-top: var(--larger);
+  color: white;
+}
+
 body {
-    overflow-y:scroll;
-    overflow-x:hidden;
-    background-image:url("bkg.png");
-    image-rendering: pixelated;
-    background-attachment:fixed;
-    background-position:left;
-    background-size:cover;
-    font-family:Helvetica, sans-serif;
-    color:var(--color-gray);
+  background-color: black;
+  color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Helvetica, sans-serif;
 }
 
-/* Main Content */
-.mainContent {
-    height: max-content;
-    margin:auto;
-    margin-top:var(--small-padding);
-    width: 66vw;
-    margin-left: 0 auto;
-    margin-right: 0 auto;
-    background-color:white;
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.mainContentInner {
-    padding:var(--small-padding);
-    padding-top:var(--minimal-padding);
+
+.content {
+  border-radius: var(--small);
+  margin: var(--large) 0;
+  padding: var(--medium);
+  background-color: white;
+  color: black;
+  width: 60%;
 }
-.mainText {
-    padding: 0 18px;
-    color: var(--color-gray);
+
+section {
+  margin: 0;
+  margin-bottom: var(--medium);
+
+  &:not(:first-child) {
+    margin-top: var(--large);
+  }
 }
+
 h1 {
-    font-size:48pt;
-    text-align:center;
-    line-height:0px
+  font-size: 48pt;
+  text-align: center;
+  line-height: 0;
 }
+
 h2 {
-    font-size:x-large;
+  font-size: x-large;
+  margin: 0;
 }
+
 h3 {
-    font-size:large;
+  font-size: large;
+  margin: 0;
+  margin-bottom: var(--small);
+
+  &:not(:first-child) {
+    margin-top: var(--medium);
+  }
 }
+
+p {
+  margin: 0;
+}
+
+p+p {
+  margin-top: var(--small);
+}
+
 .subtitle {
-    text-align:center;
+  text-align: center;
+
+  p {
+    margin: var(--small);
+  }
 }
+
 a {
-    color:var(--color-menu-dark)
+  color: inherit;
 }
-.subtitleLink {
-    color:var(--color-light)
-}
+
 ul {
-    list-style-position: inside;
-    padding-left: 0;
-  }
-
- /* Style the buttons that are used to open and close the accordion panel */
- .accordion {
-    background-color: var(--color-menu);
-    color: var(--color-light);
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-  }
-  
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-    background-color: var(--color-menu-dark);
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 15px;
 }
 
+details {
+  margin: var(--medium) 0;
+  border: var(--border-width) solid var(--grey);
+  padding: var(--small);
+  border-radius: var(--small);
+}
 
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-    padding: 0 18px;
-    background-color: var(--color-light
-    );
-    color: var(--color-gray);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+summary {
+  padding: var(--medium);
+  margin: calc(-1 * var(--small));
+  cursor: pointer;
+  font-size: large;
+
+  list-style-type: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.details-content {
+  margin: var(--small);
 }
 
 footer {
-    color:var(--color-light);
-    margin-top:var(--small-padding);
-    position:sticky;
-    width:100%;
-    text-align: center;
+  text-align: center;
+}
+
+.decorative-stripe {
+  
 }
